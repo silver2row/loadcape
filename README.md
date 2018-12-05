@@ -17,11 +17,11 @@ motors, you can power those separately w/ the positive leads while the motors GN
 
 ...
 
-So, say this is your motor: positive & negative
-                            |          |
-                            |          goes to Sink1 on the LoadCape
-                            | 
-                            goes to battery1
+    So, say this is your motor: positive & negative
+                                |          |
+                                |          goes to Sink1 on the LoadCape
+                                | 
+                                goes to battery1
 
 Do not forget to power your LoadCape w/ an additional battery supply. 
 
