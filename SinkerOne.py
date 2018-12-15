@@ -3,6 +3,9 @@ import time
 
 # from help on the googlegroups section of bbb.io!
 
+m1 = "P9_42"
+m2 = "P9_41"
+
 class LeftMotor(object):
 
      def __init__(self, m1):
@@ -14,11 +17,9 @@ class LeftMotor(object):
          GPIO.output(self.m1, GPIO.LOW)
 
      def forward(self):
-         self.stop()     #safety to avoid shock of reversals
          GPIO.output(self.m1, GPIO.HIGH)
 
      def reverse(self):
-         self.stop()
          GPIO.output(self.m1, GPIO.HIGH)
 
 class RightMotor(object):
@@ -42,41 +43,41 @@ class LeftWheel(object):
         self.LeftMotor = LeftMotor
         self.stop()
 
-    def stop(self, wait=0):
+    def stop(self, go=5):
         self.LeftMotor.stop()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def forward(self, wait=0):
+    def forward(self, go=5):
         self.LeftMotor.forward()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def reverse(self, wait=0):
+    def reverse(self, go=5):
         self.LeftMotor.reverse()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def leftTurnForward(self, wait=0):
+    def leftTurnForward(self, go=5):
         self.leftMotor.stop()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def rightTurnForward(self, wait=0):
+    def rightTurnForward(self, go=5):
         self.LeftMotor.forward()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def leftTurnReverse(self, wait=0):
+    def leftTurnReverse(self, go=5):
         self.LeftMotor.stop()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def rightTurnReverse(self, wait=0):
+    def rightTurnReverse(self, go=5):
         self.LeftMotor.reverse()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def leftPivot(self, wait=0):
+    def leftPivot(self, go=5):
         self.LeftMotor.reverse()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def rightPivot(self, wait=0):
+    def rightPivot(self, go=5):
         self.LeftMotor.forward()
-        time.sleep(wait)
+        time.sleep(1)
 
 class RightWheel(object):
 
@@ -84,41 +85,41 @@ class RightWheel(object):
         self.RightMotor = RightMotor
         self.stop()
 
-    def stop(self, wait=0):
+    def stop(self, go=5):
         self.RightMotor.stop()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def forward(self, wait=0):
+    def forward(self, go=5):
         self.RightMotor.forward()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def reverse(self, wait=0):
+    def reverse(self, go=5):
         self.RightMotor.reverse()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def leftTurnForward(self, wait=0):
+    def leftTurnForward(self, go=5):
         self.RightMotor.forward()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def rightTurnForward(self, wait=0):
+    def rightTurnForward(self, go=5):
         self.RightMotor.stop()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def leftTurnReverse(self, wait=0):
+    def leftTurnReverse(self, go=5):
         self.RightMotor.reverse()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def rightTurnReverse(self, wait=0):
+    def rightTurnReverse(self, go=5):
         self.RightMotor.stop()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def leftPivot(self, wait=0):
+    def leftPivot(self, go=5):
         self.RightMotor.forward()
-        time.sleep(wait)
+        time.sleep(1)
 
-    def rightPivot(self, wait=0):
+    def rightPivot(self, go=5):
         self.RightMotor.reverse()
-        time.sleep(wait)
+        time.sleep(1)
 
 Left = LeftWheel(LeftMotor=LeftMotor(m1="P9_42"))
 
@@ -130,11 +131,12 @@ Right.forward(5)
 Left.stop(5)
 Right.stop(5)
 
-Left.reverse(5)
-Right.reverse(5)
+Left.rightPivot(5)
+Right.rightPivot(5)
 
 Left.stop()
 Right.stop()
 
 GPIO.cleanup()
+
 
