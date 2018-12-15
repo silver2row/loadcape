@@ -1,7 +1,7 @@
 import Adafruit_BBIO.GPIO as GPIO
 import time
 
-# from help on the googlegroups section of bbb.io!
+# from help on the googlegroups section of bbb.io, i.e. circa 2016...2017.
 
 m1 = "P9_42"
 m2 = "P9_41"
