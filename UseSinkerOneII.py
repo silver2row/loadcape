@@ -8,11 +8,13 @@ m1 = "P9_42"
 while True:
 
     if m1 == 1:
-        if forward == 8:
-            forward = time.time() + 8
+        if Left.forward == 8:
+            Left.forward = 8
+            time.sleep(2)
 
     else:
-        if time.time() > forward:
+        if Left.foward >= 9:
+            Left.reverse = 8
             print("Um...")
 
 left.forward(8)
