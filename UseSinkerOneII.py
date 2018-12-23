@@ -13,14 +13,9 @@ while True:
             time.sleep(2)
 
     else:
-        if Left.foward >= 9:
+        if Left.forward == 9:
             Left.reverse = 8
+            time.sleep(2)
             print("Um...")
-
-left.forward(8)
-time.sleep(5)
-
-left.reverse(8)
-time.sleep(5)
 
 left.stop()
