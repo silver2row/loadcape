@@ -28,7 +28,7 @@ I have listed some starter software for your LoadCape. It basically controls two
     will be high or low. By calling my pin 
     high, I am able to run a specific motor from the below set 
     up of lead connections and the LoadCape.
-    time.sleep(value) or time.sleep(int) or time.sleep(5) is telling my machin 
+    time.sleep(value) or time.sleep(int) or time.sleep(5) is telling my machine 
     to run that many seconds while the pin is
     set to high/on. When I call the pin low, it runs and turns 
     the pin low/off w/ GPIO.output.
@@ -54,9 +54,11 @@ Or...
                                 |          |
                                 |          Sink1
                                 |
-                                VIN on the LoadCape
+                                VIN on the LoadCape while the positive
+                                lead from the battery goes into the VIN
+                                screw terminal.
 
-Oh and you can use sys_5v from your BBB to power the board for testing if necessary but please remember to to power the Cape w/
+Oh and you can use sys_5v from your BBB to power the board for testing if necessary but please remember to power the Cape w/
 another form of power supply (battery) so that the motor(s) have a way to get power.
 
 Seth
