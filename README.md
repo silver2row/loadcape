@@ -7,11 +7,11 @@ Hello...this is the Load Cape.
 
     So, say this is your motor: positive & negative & GND
                                 |           |           |
-                                |           |           `GND`
-                                |           - `Sink1`
+                                |           |           - GND
+                                |           - Sink1
                                 |
-                                - ```VIN on the Load Cape while the positive
+                                - VIN on the Load Cape while the positive
                                   lead from the battery goes into the VIN
-                                  screw terminal on the Load Cape too. ```
+                                  screw terminal on the Load Cape too.
 
 P.S. Load Cape, this Cape can also be used for the BeagleV-Ahead which has a th1520 quad-core processor (c910).
