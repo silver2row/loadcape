@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/toggle.dir/toggle1.c.o -o toggle  -lgpiod 

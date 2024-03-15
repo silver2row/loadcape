@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/Load.dir/Load.c.o -o Load  -lgpiod 
